@@ -24,4 +24,11 @@ npm run format
 npm run dev
 ```
 
+UI Component 는 Vuetify 사용하는걸로...
+```
+npm i vuetify
+npm install @mdi/font -D
+```
+이거 설명은 vuetifyjs.com 에서 참고하시라
+
 음.. 첫번째로는 로그인 화면 정도가 적당할 것 같구만..

@@ -1,6 +1,7 @@
 <template>
     <div>Second view</div>
-    {{ abc }}
+    {{ abc }} 
+    <v-icon>mdi-sine-wave</v-icon>
 </template>
 
 <script setup>
@@ -13,4 +14,5 @@ abc.value = 12 * 33;
 </script>
 
 <style scoped>
+
 </style>
