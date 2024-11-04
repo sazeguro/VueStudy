@@ -16,7 +16,7 @@
 √ Add Vue DevTools 7 extension for debugging? (experimental) ... *No* / Yes
 ```
 
-위의 선택 다되면 아래처럼 다음에 할 일을 보여준다
+위의 선택 다되고 생성되면 아래처럼 다음에 할 일을 보여준다
 ```
 cd vue3Ex01
 npm install
@@ -24,12 +24,16 @@ npm run format
 npm run dev
 ```
 
+## UI Component 추가 
+
 UI Component 는 Vuetify 사용하는걸로...
 ```
 npm i vuetify
 npm install @mdi/font -D
 ```
 이거 설명은 vuetifyjs.com 에서 참고하시라
+
+## 기능 구현
 
 음.. 첫번째로는 로그인 화면 정도가 적당할 것 같구만..
 
