@@ -26,8 +26,8 @@ const { mobile, mdAndUp } = useDisplay()
 
         <v-navigation-drawer v-model="drawer" :location="mobile ? 'bottom' : undefined" temporary>
             <v-list density="compact" nav>
-                <v-list-item prepend-icon="mdi-script-outline" title="Scrolled Table" to="/" ></v-list-item>
-                <v-list-item prepend-icon="mdi-account-multiple" title="Second" to="/second" ></v-list-item>
+                <v-list-item prepend-icon="mdi-table-row-plus-after" title="Data table" to="/" ></v-list-item>
+                <v-list-item prepend-icon="mdi-script-text-outline" title="Data iterator" to="/second" ></v-list-item>
                 <v-list-item prepend-icon="mdi-star" title="Test" value="starred"></v-list-item>
             </v-list>
         </v-navigation-drawer>

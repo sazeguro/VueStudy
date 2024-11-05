@@ -43,7 +43,7 @@ onMounted(() => {
 
 async function dataload(){
     loading.value = true
-    fetchApi.fetchGet('users')
+    fetchApi.fetchGet('posts')
     .then(json => {
         if(json.length==0)fetchMore.value = false
         items.value.push(...json)
@@ -52,7 +52,15 @@ async function dataload(){
     } )
 }
 
+var prevSelectedRow=null
 function rowClick(event,row){
     alert('rowClicked', row.item);
+    console.log(event)
+    console.log(row)
+    if(prevSelectedRow != null)
+        prevSelectedRow.bgColor = ''
+    prevSelectedRow = event.target.parentNode
+    event.target.parentNode.bgColor='blue'
+    
 }
 </script>
