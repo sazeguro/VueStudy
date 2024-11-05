@@ -1,4 +1,4 @@
-# vue3Ex02
+# vue3Ex03
 
 이번 Study 는 Ex02 번의 기본 프레임을 그대로 copy 한후 axios 를 추가한 예제를 만들어 볼꺼다
 axios 가 request 나 response 의 interceptors 구성하기가 편하다고 해서 해보는거다 
