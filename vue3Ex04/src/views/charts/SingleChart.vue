@@ -1,29 +1,18 @@
 <template>
-    <div>
-        Single Chart 보기
-    </div>
-    <Bar
-      id="my-chart-id"
-      :options="chartOptions"
-      :data="chartData"
-    />
+    <v-row>
+        <v-col cols="12" md="6" v-for="i in [1,2,3,4]" :key="i" >
+            <v-card variant="outlined" elevation="6" title="Single Bar">
+                <v-card-text>
+                    <SingleBar/>
+                </v-card-text>
+            </v-card>
+        </v-col>
+    </v-row>
+    
 </template>
 
 <script setup>
-
-import { ref } from 'vue'
-import { Bar } from 'vue-chartjs'
-import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
-  
-ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
-
-const chartData = ref({
-            labels: [ 'January', 'February', 'March' ],
-            datasets: [ { data: [40, 20, 12] } ]
-        })
-const chartOptions = ref({
-            responsive: true,
-        })
+import SingleBar from '@/components/SingleBar.vue';
 
 </script>
 
