@@ -18,7 +18,7 @@ export default [
   skipFormatting,
   {
     rules:{
-      "no-unused-vars": "off"
+      "vue/no-unused-vars": "off"
     }
   }
 ]

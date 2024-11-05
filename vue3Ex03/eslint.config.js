@@ -1,7 +1,10 @@
-import js from '@eslint/js'
-import pluginVue from 'eslint-plugin-vue'
+import globals from "globals";
+import pluginJs from "@eslint/js";
+import pluginVue from "eslint-plugin-vue";
 import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
 
+
+/** @type {import('eslint').Linter.Config[]} */
 export default [
   {
     name: 'app/files-to-lint',
@@ -13,13 +16,17 @@ export default [
     ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
   },
 
-  js.configs.recommended,
-  ...pluginVue.configs['flat/essential'],
-  skipFormatting,
+  {languageOptions: { globals: globals.browser }},
 
+  pluginJs.configs.recommended,
+
+  ...pluginVue.configs["flat/essential"],
+
+  skipFormatting,
+  
   {
     rules:{
       "vue/no-unused-vars": "off",
     }
-  },
-]
+  }
+];
