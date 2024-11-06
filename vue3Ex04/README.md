@@ -9,5 +9,10 @@ MainLayout.vue 의 메뉴 그룹에서 open-strategy 는 multiple, single, list 
 아래 명령으로 library 설치하고
 ```
 npm i vue-chartjs chart.js
+npm install chartjs-plugin-zoom
 ```
+
 실제 예제는 여기 https://vue-chartjs.org/guide/ 공식 사이트 참조하자
+그리고 여기도 https://www.chartjs.org/docs/latest/
+
+zoom 은 여기 https://www.chartjs.org/chartjs-plugin-zoom/guide/
