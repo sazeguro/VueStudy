@@ -2,6 +2,7 @@
     <div style="height: 400px;">
         <Line :data="chartData" :options="chartOptions" />
     </div>
+    Zoom 리셋 기능 추가 필요
 </template>
 
 <script setup>
