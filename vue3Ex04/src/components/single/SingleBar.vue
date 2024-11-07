@@ -1,6 +1,5 @@
 <template>
     <Bar
-      id="my-chart-id"
       :options="chartOptions"
       :data="chartData"
     />
@@ -36,6 +35,7 @@ const chartData = ref({
         })
 const chartOptions = ref({
             responsive: true,
+            maintainAspectRatio: true,
         })
 
 </script>

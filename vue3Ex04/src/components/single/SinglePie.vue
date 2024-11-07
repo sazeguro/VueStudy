@@ -21,7 +21,7 @@ const data = ref({
 
 const options = ref({
   responsive: true,
-  maintainAspectRatio: false
+  maintainAspectRatio: false,
 })
 
 </script>

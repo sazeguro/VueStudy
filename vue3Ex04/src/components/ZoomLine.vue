@@ -1,50 +1,70 @@
 <template>
     <div style="height: 400px;">
-        <Line :data="chartData" :options="chartOptions" />
+        <Line :data="chartData" :options="chartOptions" ref="myZoomLine" />
     </div>
-    Zoom 리셋 기능 추가 필요
+    <v-chip @click="resetZoomBtn()">reset</v-chip>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import { Line } from 'vue-chartjs'
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend
 } from 'chart.js'
 import zoomPlugin from 'chartjs-plugin-zoom';
 
 import json from '@/assets/sample_data.json'
   
 ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-  zoomPlugin
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend,
+    zoomPlugin
 )
 // ChartJS.defaults.backgroundColor = 'red';
-// ChartJS.defaults.borderColor = 'blue';
-ChartJS.defaults.color = 'white';
+// ChartJS.defaults.borderColor = 'gray';
+// ChartJS.defaults.color = 'white';
+
+const myZoomLine = ref(null)
 
 const chartData = ref({
             labels: json.data.map(row => row.MeasureTime.split("T")[1].slice(0,8)),
             datasets: [
                 { 
-                    label: 'Data One',
+                    label: 'Capacity',
                     backgroundColor: 'red',
                     borderColor: 'blue',
                     data: json.data.map(row => row.Capacity)
-                } 
+                },
+                { 
+                    label: 'Voltage',
+                    backgroundColor: 'yellow',
+                    borderColor: 'cyan',
+                    data: json.data.map(row => row.Voltage)
+                },
+                { 
+                    label: 'Current',
+                    backgroundColor: 'white',
+                    borderColor: 'ivory',
+                    data: json.data.map(row => row.Current)
+                },
+                { 
+                    label: 'Power',
+                    backgroundColor: 'purple',
+                    borderColor: 'red',
+                    data: json.data.map(row => row.Power)
+                },
             ]
         })
 
@@ -108,6 +128,12 @@ const chartOptions = ref({
                 }
             },
         })
+
+const resetZoomBtn = () => {
+  
+    myZoomLine.value.chart.resetZoom()
+  
+};
 
 </script>
 

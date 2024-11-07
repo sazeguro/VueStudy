@@ -18,5 +18,5 @@ GitHub [markdown 서식 구문](https://docs.github.com/ko/get-started/writing-o
 > npm i vuetify
 > npm install @mdi/font -D
 > npm install --save axios
-> npm i vue-chartjs chart.js
+> npm i vue-chartjs chart.js chartjs-plugin-zoom chartjs-plugin-datalabels
 ```

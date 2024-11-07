@@ -100,6 +100,10 @@ const menuItems = ref([
                 title: "Multi Chart",
                 to: "/chart/multi",
             },
+            {
+                title: "Zoom Chart",
+                to: "/chart/zoom",
+            },
         ]
     }
 ])
