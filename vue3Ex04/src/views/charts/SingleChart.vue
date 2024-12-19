@@ -81,9 +81,36 @@ const lineData = ref({
           ]
         })
 const lineOptions = ref({
-            responsive: true,
-            maintainAspectRatio: true,
-        })
+    responsive: true,
+    maintainAspectRatio: true,
+    plugins: {
+        annotation: {
+            annotations: {
+                line1: {
+                    type: 'line',
+                    yMin: 21,
+                    yMax: 21,
+                    borderColor: 'rgb(255, 99, 132)',
+                    borderWidth: 2,
+                },
+                line2: {
+                    type: 'line',
+                    yMin: 16,
+                    yMax: 16,
+                    borderColor: 'rgb(255, 99, 132)',
+                    borderWidth: 2,
+                },
+                line3: {
+                    type: 'line',
+                    yMin: 27,
+                    yMax: 27,
+                    borderColor: 'rgb(255, 99, 132)',
+                    borderWidth: 2,
+                }
+            }
+        }
+    }
+})
 
 
 </script>

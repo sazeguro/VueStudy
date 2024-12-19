@@ -14,6 +14,7 @@ import {
   Tooltip,
   Legend
 } from 'chart.js'
+import annotationPlugin from 'chartjs-plugin-annotation';
   
 ChartJS.register(
   CategoryScale,
@@ -23,6 +24,7 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
+  annotationPlugin,
 )
 // ChartJS.defaults.backgroundColor = 'red';
 // ChartJS.defaults.borderColor = 'blue';

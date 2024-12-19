@@ -11,11 +11,16 @@ MainLayout.vue 의 메뉴 그룹에서 open-strategy 는 multiple, single, list 
 npm i vue-chartjs chart.js
 npm install chartjs-plugin-zoom
 npm install chartjs-plugin-datalabels --save
+npm install chartjs-plugin-annotation
 ```
 
 실제 예제는 여기 https://vue-chartjs.org/guide/ 공식 사이트 참조하자
-그리고 여기도 https://www.chartjs.org/docs/latest/
+ -  여기는 원조 사이트 https://www.chartjs.org/docs/latest/
 
 zoom plugin 은 여기 https://www.chartjs.org/chartjs-plugin-zoom/guide/
 
 ChartDataLabels plugin 은 여기 https://chartjs-plugin-datalabels.netlify.app/guide/
+ - 챠트에 라벨 써주는거 편하게 해놓은거
+
+annotation plugin 은 여기 https://www.chartjs.org/chartjs-plugin-annotation/latest/guide/
+ - 챠트에 기준선이나 박스, 글자 등을 아무 위치에 놓을수 있게 해놓은거
